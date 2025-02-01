@@ -1,4 +1,4 @@
-# WarehoseCase
+# WarehouseCase
 
 In this project, I used json-server as a database. 
 
