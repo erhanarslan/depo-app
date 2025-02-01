@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+app-header {
+  width: 100%;
+}
+
+app-warehouse-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}

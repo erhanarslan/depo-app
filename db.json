@@ -1,0 +1,89 @@
+{
+  "warehouses": [
+    {
+      "id": "1",
+      "name": "Depo A"
+    },
+    {
+      "id": "2",
+      "name": "Depo B"
+    }
+  ],
+  "shelves": [
+    {
+      "id": "101",
+      "name": "R4",
+      "type": "Temizlik",
+      "warehouseId": 1
+    },
+    {
+      "id": "103",
+      "name": "R6",
+      "type": "Elektronik",
+      "warehouseId": 1
+    },
+    {
+      "id": "104",
+      "name": "R7",
+      "type": "Elektronik",
+      "warehouseId": 1
+    },
+    {
+      "id": "201",
+      "name": "R1",
+      "type": "Elektronik",
+      "warehouseId": 2
+    },
+    {
+      "id": "202",
+      "name": "R2",
+      "type": "Gıda",
+      "warehouseId": 2
+    },
+    {
+      "id": "203",
+      "name": "R3",
+      "type": "Temizlik",
+      "warehouseId": 2
+    },
+    {
+      "id": "383e",
+      "name": "R4",
+      "type": "Kırtasiye",
+      "warehouseId": "2",
+      "warehouseName": "Depo B"
+    },
+    {
+      "name": "R8",
+      "type": "Giyim",
+      "warehouseId": "1",
+      "warehouseName": "Depo A",
+      "id": "nkWGySg"
+    }
+  ],
+  "products": [
+    {
+      "id": "1234",
+      "name": "Telefon",
+      "shelfName": "R1",
+      "shelfId": "201"
+    },
+    {
+      "id": "212",
+      "name": "kulaklık",
+      "shelfId": "104"
+    },
+    {
+      "id": "123",
+      "name": "tshirt",
+      "shelfName": "R8",
+      "shelfId": "nkWGySg"
+    },
+    {
+      "id": "321",
+      "name": "tshirt",
+      "shelfName": "R8",
+      "shelfId": "nkWGySg"
+    }
+  ]
+}

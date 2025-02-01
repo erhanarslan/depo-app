@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="left">
+    <h1>Depo App</h1>
+  </div>
+  <div class="center">
+    <ul>
+      <li *ngFor="let rate of exchangeRates" class="rate-box">
+        {{ rate.currency }} {{ rate.rate | number:'1.2-2' }} TL
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        placeholder="Ürün Ara"
+        class="search-input"
+        (input)="onSearch($event)"
+      >
+    </div>
+  </div>
+</div>

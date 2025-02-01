@@ -1,0 +1,15 @@
+.custom-product-button {
+  background-color: #1976d2;
+  color: white;
+  text-indent: 0;
+  visibility: visible;
+  display: inline-block;
+}
+
+td mat-cell .custom-product-button {
+  background-color: #1976d2 !important;
+  color: white !important;
+  text-indent: 0;
+  visibility: visible;
+  display: inline-block;
+}

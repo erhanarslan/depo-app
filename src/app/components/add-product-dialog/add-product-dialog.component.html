@@ -1,0 +1,25 @@
+<div class="dialog-container">
+  <h2>Ürün Ekleme</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>ID</mat-label>
+      <input matInput formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ürün Adı</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Reyon Adı</mat-label>
+      <input matInput formControlName="shelfName" readonly />
+
+    </mat-form-field>
+
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit">Ekle</button>
+    </div>
+  </form>
+</div>

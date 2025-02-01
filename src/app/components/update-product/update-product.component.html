@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Ürünü Güncelle</h1>
+<div mat-dialog-content class="dialog-container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Ürün ID</mat-label>
+      <input matInput formControlName="id" readonly />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ürün Adı</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Bulunduğu Reyon Türü</mat-label>
+      <input matInput formControlName="shelfType" readonly />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Taşınacak Depoyu Seçiniz</mat-label>
+      <mat-select formControlName="targetWarehouse">
+        <mat-option *ngFor="let warehouse of warehouses" [value]="warehouse.id">{{ warehouse.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Taşınacak Reyon Seçiniz</mat-label>
+      <mat-select formControlName="targetShelf">
+        <mat-option *ngFor="let shelf of availableShelves" [value]="shelf.id">{{ shelf.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div mat-dialog-actions class="button-group">
+      <button mat-raised-button (click)="deleteProduct()">Ürünü Sil</button>
+      <button mat-raised-button color="primary" type="submit">Kaydet</button>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="dialog-container">
+  <h2>Reyon Ekleme</h2>
+  <form [formGroup]="shelfForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Reyon Adı</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Reyon Türü</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let type of shelfTypes" [value]="type">
+          {{ type }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Eklenecek Depo</mat-label>
+      <input matInput formControlName="warehouseName" readonly>
+    </mat-form-field>
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit">Ekle</button>
+    </div>
+  </form>
+</div>

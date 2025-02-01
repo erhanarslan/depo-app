@@ -1,0 +1,46 @@
+.warehouse-wrapper {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100vw;
+}
+
+.warehouse-section {
+  width: 48%;
+  margin: 10px;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.product-button {
+  margin: 2px;
+}

@@ -1,0 +1,48 @@
+<div class="warehouse-wrapper">
+  <div class="warehouse-section" *ngFor="let warehouse of filteredWarehouses">
+    <h1>{{ warehouse.name }}</h1>
+    <div class="table-container">
+      <table mat-table [dataSource]="warehouse.shelves" class="mat-elevation-z0">
+        <ng-container matColumnDef="reyon">
+          <th mat-header-cell *matHeaderCellDef class="sticky-header"> Reyon </th>
+          <td mat-cell *matCellDef="let shelf">
+            {{ shelf.name }}
+            <button mat-icon-button (click)="deleteShelf(shelf.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tur">
+          <th mat-header-cell *matHeaderCellDef class="sticky-header"> Tür </th>
+          <td mat-cell *matCellDef="let shelf"> {{ shelf.type }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="urunler">
+          <th mat-header-cell *matHeaderCellDef class="sticky-header"> Ürünler </th>
+          <td mat-cell *matCellDef="let shelf">
+            <ng-container *ngIf="shelf.products && shelf.products.length; else noProducts">
+              <button mat-raised-button *ngFor="let product of shelf.products" class="product-button"
+                (click)="openUpdateProductDialog(product)">
+                {{ product.name }}
+              </button>
+            </ng-container>
+            <ng-template #noProducts>Ürün Bulunmamaktadır.</ng-template>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="sticky-header">
+            <button mat-raised-button color="primary" (click)="openAddShelfDialog(warehouse)">Reyon Ekle</button>
+          </th>
+          <td mat-cell *matCellDef="let shelf">
+            <button mat-raised-button color="primary" (click)="openAddProductDialog(shelf)">Ürün Ekle</button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="sticky-header"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
