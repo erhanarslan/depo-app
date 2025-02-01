@@ -1,5 +1,16 @@
 # WarehoseCase
 
+In this project, I used json-server as a database. 
+
+Setup
+Install JSON Server via npm:
+
+`npm install json-server`
+
+Start the JSON Server with your db.json file:
+
+`npm run start` or `json-server --watch db.json`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
 ## Development server
